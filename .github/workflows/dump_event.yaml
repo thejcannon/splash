@@ -1,0 +1,14 @@
+name: Echo Payload
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  echo-payload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo payload
+        run: |
+          echo "Merge Group Payload:"
+          echo '${{ toJson(github) }}'
