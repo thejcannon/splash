@@ -5,6 +5,9 @@ on:
     pull_request:
         types: [opened, edited, reopened]
 
+permissions:
+  checks: none
+
 jobs:
     try_not_to_fail:
         runs-on: ubuntu-latest
