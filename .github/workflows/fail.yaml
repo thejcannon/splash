@@ -11,7 +11,8 @@ permissions:
 jobs:
     try_not_to_fail:
         runs-on: ubuntu-latest
-        continue-on-error: true
         steps:
             - name: just fail lol
+              continue-on-error: true
               run: exit 1
+
