@@ -1,0 +1,14 @@
+---
+name: Try not to fail
+
+on:
+    pull_request:
+        types: [opened, edited, reopened]
+
+jobs:
+    try_not_to_fail:
+        runs-on: ubuntu-latest
+        continue-on-error: true
+        steps:
+            - name: just fail lol
+              run: exit 1
